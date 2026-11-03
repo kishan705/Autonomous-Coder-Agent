@@ -25,7 +25,7 @@ Running entirely on local open-weights infrastructure via **Ollama (`qwen2.5-cod
 - **Local ReAct Control Loop:** Iterative reasoning-action cycle where the model plans actions, executes tools, observes feedback, and refines fixes.
 - **Codebase Vector Search (RAG):** Local semantic indexing using **LanceDB** and HuggingFace embeddings (`all-MiniLM-L6-v2`) to query files based on architectural intent.
 - **MCP-Style Tool Integration:** Modular execution tools (`read_file`, `write_file`, `run_tests`, `search_codebase`) bridging LLM output directly to OS operations.
-- ** Closed-Loop Test Sandboxing:** Runs unit test suites via Python `subprocess`, feeding terminal `pytest` logs back to the agent history until a green suite is achieved.
+- **Closed-Loop Test Sandboxing:** Runs unit test suites via Python `subprocess`, feeding terminal `pytest` logs back to the agent history until a green suite is achieved.
 - **Local Model Failure Mitigation:** Built-in JSON balanced-brace text parser (`extract_first_json_call`) to reliably capture tool invocations from small open-weights models.
 
 ---
